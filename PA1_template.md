@@ -7,6 +7,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
+```{r}
 library(ggplot2)
 
 # read the data - assume the script is run on the same directory as the csv file
@@ -50,7 +51,7 @@ mostSteps.steps <- steps_interval$interval[steps_interval$mean.steps == max(step
 # The step interval each day is (835)-- "08:35"
 
 
-# Input missing values
+# Input miising values
 
 # total number of missing values
 
@@ -95,4 +96,5 @@ steps2$median.steps <- round(steps2$median.steps)
 ggplot(steps2, aes(x = interval, y = mean.steps)) + ylab("Number of Steps") + geom_line() + facet_grid(weekday~.)
 
 # the graph shows the users walk late on the weekends as compared to weekdays but more steps
+```
 
