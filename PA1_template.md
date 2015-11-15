@@ -61,6 +61,8 @@ sum(is.na(data$steps))
 
 
 #create gooddata set
+# by remvoving the na values
+
 goodData <- data
 
 goodData$steps[is.na(goodData$steps)] <- 
