@@ -73,8 +73,7 @@ data &lt;- read.csv(&quot;activity.csv&quot;)
 
 data$date &lt;- as.POSIXct(data$date)
 
-# calculate the steps in a day uing the aggregate function
-# and avoid tapply to generate the historgram
+# calculate the steps in a day using tapply historgram
 
 steps_in_day &lt;- tapply(data$steps, data$date, sum, na.rm=TRUE)
 hist(steps_in_day)</code></pre>

@@ -15,8 +15,7 @@ data <- read.csv("activity.csv")
 
 data$date <- as.POSIXct(data$date)
 
-# calculate the steps in a day uing the aggregate function
-# and avoid tapply to generate the historgram
+# calculate the steps in a day using tapply historgram
 
 steps_in_day <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 hist(steps_in_day)
